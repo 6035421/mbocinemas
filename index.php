@@ -16,7 +16,9 @@
 
 <?php include("./templates/header.php");?>
 
-    <main></main>
+    <main>
+        <a href="./pages/mijnReserveringen.php">www</a>
+    </main>
     
 
     <script src="./js/index.js"></script>
