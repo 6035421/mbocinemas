@@ -41,7 +41,7 @@
                         src="https://design.penpot.app/assets/by-file-media-id/a0a8e792-b2d2-818e-8005-541803339e04">
                     <div class="column userInfo">
                         <p class="contactHighlight">JohnCharismatic - Team Leider</p>
-                        <p>Is onze team leider en iedereen houd van hem want zijn charisma is erg hoog zo hoog zelfs dat er eigenlijk nooit problemen zijn.
+                        <p>JohnCharismatic, is onze team leider en iedereen houd van hem want zijn charisma is erg hoog zo hoog zelfs dat er eigenlijk nooit problemen zijn.
                         </p>
                     </div>
                 </div>
