@@ -20,6 +20,7 @@
     font-family: var(--font);
 
     border-radius:10px;
+    border-width:0px;
 }
 
 html,
@@ -31,6 +32,8 @@ body {
     background-image: url('../assets/images/bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    overflow:hidden;
 }
 
 header {
@@ -40,6 +43,7 @@ header {
     border-width:0px;
     border-bottom-width:2px;
     border-color:var(--primary);
+    border-radius:0px;
 
     padding:8px;
 
@@ -49,6 +53,15 @@ header {
 
 header img {
     height:45px;
+}
+
+main {
+    padding:8px;
+    height:calc(100% - 70.6px);
+
+    position:relative;
+
+    overflow-y:auto;
 }
 
 #title {
@@ -80,6 +93,10 @@ header img {
 .column {
     display:flex;
     flex-direction:column;
+}
+
+.rounded {
+    border-radius:300px;
 }
 
 hr {
@@ -116,3 +133,70 @@ hr[titleText]:not([titleText=""])::before {
     padding: 4px;
     font-size: 13px;
 }
+
+.contactHighlight {
+    background-color:var(--secondaryContainer);
+    color:var(--secondaryContainerTextColor);
+
+    padding:4px;
+    margin-right:8px;
+
+    width:max-content;
+}
+
+.contact {
+    background-color: var(--secondary);
+
+    padding:4px;
+
+    align-items:center;
+
+    color:var(--secondaryTextColor);
+
+    margin-bottom:8px;
+}
+
+.contact img {
+    height:150px;
+    width:130px;
+
+    object-fit:cover;
+
+    margin-right:8px;
+}
+
+h1 {
+    font-size: 30px;
+
+    background-color:var(--secondary);
+    color:var(--secondaryTextColor);
+
+    margin:0px;
+
+    padding:16px;
+
+    text-align:center;
+}
+
+.userInfo {
+    height:100%;
+
+    gap:8px;
+}
+
+.userInfo * {
+    margin:0px;
+}
+
+.about {
+    align-items:flex-start;
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        width:70%;
+
+        margin-right:auto;
+        margin-left:auto;
+    }
+  }
