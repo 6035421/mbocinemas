@@ -9,8 +9,15 @@
     --secondary: #516574;
     --secondaryTextColor: white;
 
+    --secondaryContainer: #748ca5;
+    --secondaryContainerTextColor:white;
+
     --tertiary: #b87580;
     --tertiaryTextColor: white;
+}
+
+* {
+    font-family: var(--font);
 }
 
 html,
@@ -22,4 +29,43 @@ body {
     background-image: url('../assets/images/bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+header {
+    height:45px;
+
+    border-style:solid;
+    border-width:0px;
+    border-bottom-width:2px;
+    border-color:var(--primary);
+
+    padding:8px;
+
+    display:flex;
+    flex-direction:row;
+}
+
+header img {
+    height:45px;
+}
+
+#title {
+    font-size:20px;
+
+    border-radius:200px;
+
+    background-color:var(--primary);
+
+    margin:0px;
+
+    color:var(--primaryTextColor);
+
+    margin-left:8px;
+
+    padding:8px;
+
+    display:flex;
+    flex-direction:row;
+
+    align-items:center;
 }
