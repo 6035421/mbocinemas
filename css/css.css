@@ -13,7 +13,7 @@
     --secondaryContainerTextColor:white;
 
     --tertiary: #b87580;
-    --tertiaryTextColor: white;
+    --tertiaryTextColor: black;
 }
 
 * {
@@ -190,6 +190,20 @@ h1 {
 
 .about {
     align-items:flex-start;
+}
+
+#safe {
+    padding:8px;
+
+    font-size:25px;
+
+    border-radius:200px;
+
+    background-color:var(--tertiary);
+    color:var(--tertiaryTextColor);
+
+    margin-right:auto;
+    margin-left:auto;
 }
 
 @media only screen and (min-width: 600px) {
