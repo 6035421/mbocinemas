@@ -1,7 +1,23 @@
-html, body {
-    margin:0px;
+:root {
+    --font: sans-serif;
 
-    height:100%;
+    --primary: #b32f34;
+    --primaryTextColor: white;
 
-    background-image:url('../assets/images/bg.jpeg');
+    --secondary: #516574;
+    --secondaryTextColor: white;
+
+    --tertiary: #b87580;
+    --tertiaryTextColor: white;
+}
+
+html,
+body {
+    margin: 0px;
+
+    height: 100%;
+
+    background-image: url('../assets/images/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

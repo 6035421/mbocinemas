@@ -7,8 +7,8 @@
     <meta name="author" content="Quinten, Luke">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../mbocinemas/css/css.css">
-    <link rel="icon" type="image/x-icon" href="../mbocinemas/assets/images/logo.png">
+    <link rel="stylesheet" type="text/css" href="./css/css.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
 
     <title>MBO Cinema's - Home</title>
 </head>
@@ -17,6 +17,6 @@
     <main></main>
     
 
-    <script src="../mbocinemas/js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
