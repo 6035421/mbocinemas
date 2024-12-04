@@ -61,6 +61,15 @@
                 </div>
             </article>
 
+            <hr titleText="Status">
+
+            <article>
+                <div class="rounded row contact">
+                    <div class="rounded contactHighlight">Status: </div>
+                    Betaald
+                </div>
+            </article>
+
             <hr titleText="Contact">
             <article>
                 <div class="rounded row contact">
