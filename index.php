@@ -20,6 +20,7 @@
         <a href="./pages/mijnReserveringen.php">www</a>
         <a href="./pages/editReserveringEnInfo.php">www</a>
         <a href="./pages/overons.php">www</a>
+        <a href="./pages/agenda.php">www</a>
     </main>
     
 

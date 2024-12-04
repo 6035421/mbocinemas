@@ -165,6 +165,18 @@ hr[titleText]:not([titleText=""])::before {
     margin-right:8px;
 }
 
+h3 {
+    background-color:var(--secondary);
+    color:var(--secondaryTextColor);
+
+    margin:0px;
+    margin-bottom:8px;
+
+    padding:8px;
+
+    text-align:center;
+}
+
 h1 {
     font-size: 30px;
 
@@ -210,11 +222,51 @@ h1 {
 margin-bottom:8px;
 }
 
+table {
+    margin: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: black;
+    border-collapse: collapse;
+
+    width:100%;
+}
+
+td {
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: black;
+
+    margin-left:8px;
+}
+
+.header {
+    background-color:var(--secondaryContainer);
+    color:var(--secondaryContainerTextColor);
+}
+
+.items {
+    height:100px;
+}
+
+#legenda {
+    margin-bottom:8px;
+}
+
 @media only screen and (min-width: 600px) {
     main {
         width:70%;
 
         margin-right:auto;
         margin-left:auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #legenda {
+        margin-left:auto;
+        margin-right:auto;
     }
   }
