@@ -23,7 +23,7 @@
                 <h1 class="marginBottom">Agenda</h1>
             </article>
 
-            <article>
+            <article class="column">
                 <h3>week 12 - 19</h3>
 
                 <div class="row contact about">
