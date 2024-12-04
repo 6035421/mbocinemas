@@ -55,13 +55,33 @@ header img {
     height:45px;
 }
 
+.header-nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    margin-left: 730px;
+}
+
+.header-nav ul li {
+    display: inline;
+}
+
+.header-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.header-nav ul li a:hover {
+    text-decoration: underline;
+}
+
 main {
     padding:8px;
     height:calc(100% - 70.6px);
 
     position:relative;
-
-    overflow-y:auto;
 }
 
 #title {
@@ -253,6 +273,74 @@ td {
 
 #legenda {
     margin-bottom:8px;
+}
+
+.section {
+    margin: 20px 0;
+}
+
+.section-title {
+    background-color: var(--primary);
+    color: var(--primaryTextColor);
+    padding: 8px;
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.vertical-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    padding: 10px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.vertical-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.vertical-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 10px;
+}
+
+.vertical-scroll::-webkit-scrollbar-track {
+    background-color: var(--secondary);
+    border-radius: 10px;
+}
+
+.grid-item {
+    flex: 0 0 200px;
+    height: 250px;
+    background-color: var(--secondary);
+    border: 2px solid var(--secondaryContainer);
+    border-radius: 10px;
+    scroll-snap-align: center;
 }
 
 @media only screen and (min-width: 600px) {

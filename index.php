@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Kijk de nieuwste film bij MBO Cinema's">
@@ -12,18 +13,38 @@
 
     <title>MBO Cinema's - Home</title>
 </head>
+
 <body>
 
-<?php include("./templates/header.php");?>
+    <?php include("./templates/header.php"); ?>
 
     <main>
-        <a href="./pages/mijnReserveringen.php">www</a>
-        <a href="./pages/editReserveringEnInfo.php">www</a>
-        <a href="./pages/overons.php">www</a>
-        <a href="./pages/agenda.php">www</a>
+        <div class="vertical-scroll">
+            <h1>Home</h1>
+
+            <!-- Nieuw Section -->
+            <div class="section">
+                <h2 class="section-title">Nieuw</h2>
+                <div class="horizontal-scroll">
+                    <?php for ($i = 0; $i < 12; $i++): ?>
+                        <div class="grid-item"></div>
+                    <?php endfor; ?>
+                </div>
+            </div>
+
+            <!-- Categorie Section -->
+            <div class="section">
+                <h2 class="section-title">Categorie</h2>
+                <div class="horizontal-scroll">
+                    <?php for ($i = 0; $i < 12; $i++): ?>
+                        <div class="grid-item"></div>
+                    <?php endfor; ?>
+                </div>
+            </div>
+        </div>
     </main>
-    
 
     <script src="./js/index.js"></script>
 </body>
+
 </html>
