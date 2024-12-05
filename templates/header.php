@@ -1,3 +1,5 @@
+<title>MBO Cinema's - <?php echo htmlspecialchars(ucfirst(basename($_SERVER['PHP_SELF'], '.php'))); ?></title>
+
 <header>
     <img src='../assets/images/logo.png' alt='logo'>
     <h1 id="title">MBO Cinema's</h1>
