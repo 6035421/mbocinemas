@@ -7,8 +7,8 @@
     <meta name="keywords" content="Films, series, bioscoop">
     <meta name="author" content="Quinten, Luke">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" type="text/css" href="../css/css.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
 
     <title>MBO Cinema's - Edit Reserveringen</title>
 </head>
@@ -20,7 +20,7 @@
     <main>
         <section class="column">
 
-        <hr titleText="Data">
+            <hr titleText="Data">
             <article>
                 <div class="rounded row contact">
                     <div class="rounded contactHighlight">Datum: </div>
@@ -38,7 +38,7 @@
                 </div>
             </article>
 
-        <hr titleText="Locatie">
+            <hr titleText="Locatie">
             <article>
                 <div class="rounded row contact">
                     <div class="rounded contactHighlight">Bioscoop: </div>

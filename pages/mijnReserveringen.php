@@ -7,8 +7,8 @@
     <meta name="keywords" content="Films, series, bioscoop">
     <meta name="author" content="Quinten, Luke">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" type="text/css" href="../css/css.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
 
     <title>MBO Cinema's - Mijn Reserveringen</title>
 </head>
@@ -40,7 +40,8 @@
                         src="https://design.penpot.app/assets/by-file-media-id/a0a8e792-b2d2-818e-8005-541803339e04">
                     <div class="column userInfo">
                         <p class="contactHighlight">JohnCharismatic - The story</p>
-                        <p>JohnCharismatic, is onze team leider en iedereen houd van hem want zijn charisma is erg hoog zo hoog zelfs dat er eigenlijk nooit problemen zijn.
+                        <p>JohnCharismatic, is onze team leider en iedereen houd van hem want zijn charisma is erg hoog
+                            zo hoog zelfs dat er eigenlijk nooit problemen zijn.
                         </p>
                     </div>
                 </div>
@@ -50,7 +51,8 @@
                         src="https://design.penpot.app/assets/by-file-media-id/7ad540b5-8190-815d-8005-568f922972e0">
                     <div class="column userInfo">
                         <p class="contactHighlight">Quinten - The porks romance.</p>
-                        <p>Noh de Fortnite pro is onze beveiliger hij zorgt ervoor dat de bioscoop veilig blijft doormiddel van zijn 360 no scopes.
+                        <p>Noh de Fortnite pro is onze beveiliger hij zorgt ervoor dat de bioscoop veilig blijft
+                            doormiddel van zijn 360 no scopes.
                         </p>
                     </div>
                 </div>
@@ -60,7 +62,8 @@
                         src="https://design.penpot.app/assets/by-file-media-id/7ad540b5-8190-815d-8005-5690490170f0">
                     <div class="column userInfo">
                         <p class="contactHighlight">PS2 - Unlimited Play</p>
-                        <p>Noh de Fortnite pro is onze beveiliger hij zorgt ervoor dat de bioscoop veilig blijft doormiddel van zijn 360 no scopes.
+                        <p>Noh de Fortnite pro is onze beveiliger hij zorgt ervoor dat de bioscoop veilig blijft
+                            doormiddel van zijn 360 no scopes.
                         </p>
                     </div>
                 </div>
