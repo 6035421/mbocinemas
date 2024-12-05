@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/css.css">
     <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
-
-    <title>MBO Cinema's - Home</title>
 </head>
 
 <body>

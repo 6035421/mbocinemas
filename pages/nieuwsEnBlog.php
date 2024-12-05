@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/css.css">
     <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
 
-    <title>MBO Cinema's - nieuwsEnBlog</title>
+    <title>MBO Cinema's - Nieuws en Blog</title>
 </head>
 
 <body>

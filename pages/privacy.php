@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../css/css.css">
     <link rel="icon" type="image/x-icon" href="../assets/images/logo.png">
 
-    <title>MBO Cinema's - Privacy</title>
+    <title>MBO Cinema's - <?php echo htmlspecialchars(ucfirst(basename($_SERVER['PHP_SELF'], '.php'))); ?></title>
 </head>
 
 <body>
