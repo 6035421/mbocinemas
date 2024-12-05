@@ -341,6 +341,41 @@ td {
     border: 2px solid var(--secondaryContainer);
     border-radius: 10px;
     scroll-snap-align: center;
+    color: white;
+}
+
+.privacy { 
+    margin-top: 100px;
+}
+
+.privacy-item {
+    flex: 0 0 200px;
+    height: 350px;
+    background-color: var(--secondary);
+    border: 2px solid var(--secondaryContainer);
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+.privacy-item > p {
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.nieuwsEnBlog-item {
+    flex: 0 0 200px;
+    height: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--secondary);
+    border: 2px solid var(--secondaryContainer);
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+.nieuwsEnBlog-item > h2, p {
+    color: white;
 }
 
 @media only screen and (min-width: 600px) {

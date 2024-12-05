@@ -18,78 +18,80 @@
     <?php include("../templates/header.php"); ?>
 
     <main>
-        <section>
-            <article>
-                <h1 class="marginBottom">Agenda</h1>
-            </article>
+        <article class="vertical-scroll">
+            <section>
+                <article>
+                    <h1 class="marginBottom">Agenda</h1>
+                </article>
 
-            <article class="column">
-                <h3>week 12 - 19</h3>
+                <article class="column">
+                    <h3>week 12 - 19</h3>
 
-                <div class="row contact about">
-                    <table>
-                        <tr class="header">
-                            <td>Do</td>
-                            <td>Vri</td>
-                            <td>Za</td>
-                            <td>Zo</td>
-                        </tr>
-                        <tr class="items">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                    <div class="row contact about">
+                        <table>
+                            <tr class="header">
+                                <td>Do</td>
+                                <td>Vri</td>
+                                <td>Za</td>
+                                <td>Zo</td>
+                            </tr>
+                            <tr class="items">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
 
-                        <tr class="header">
-                            <td>Do</td>
-                            <td>Vri</td>
-                            <td>Za</td>
-                            <td>Zo</td>
-                        </tr>
-                        <tr class="items">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                            <tr class="header">
+                                <td>Do</td>
+                                <td>Vri</td>
+                                <td>Za</td>
+                                <td>Zo</td>
+                            </tr>
+                            <tr class="items">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
 
-                        <tr class="header">
-                            <td>Do</td>
-                            <td>Vri</td>
-                            <td>Za</td>
-                            <td>Zo</td>
-                        </tr>
-                        <tr class="items">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+                            <tr class="header">
+                                <td>Do</td>
+                                <td>Vri</td>
+                                <td>Za</td>
+                                <td>Zo</td>
+                            </tr>
+                            <tr class="items">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
 
-                        <tr class="header">
-                            <td>Do</td>
-                            <td>Vri</td>
-                            <td>Za</td>
-                            <td>Zo</td>
-                        </tr>
-                        <tr class="items">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
+                            <tr class="header">
+                                <td>Do</td>
+                                <td>Vri</td>
+                                <td>Za</td>
+                                <td>Zo</td>
+                            </tr>
+                            <tr class="items">
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
 
-                <img id="legenda" src="../assets/images/agendaLegenda.png" alt="'legenda">
+                    <img id="legenda" src="../assets/images/agendaLegenda.png" alt="'legenda">
 
-            </article>
+                </article>
 
-            <article>
-                <h3>Wij zijn elke week van Do tot Zo geopend van 15:00 tot 22:00 uur</h3>
-            </article>
-        </section>
+                <article>
+                    <h3>Wij zijn elke week van Do tot Zo geopend van 15:00 tot 22:00 uur</h3>
+                </article>
+            </section>
+        </article>
     </main>
 
 

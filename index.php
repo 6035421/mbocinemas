@@ -19,7 +19,7 @@
     <?php include("./templates/header.php"); ?>
 
     <main>
-        <div class="vertical-scroll">
+        <article class="vertical-scroll">
             <h1>Home</h1>
 
             <!-- Nieuw Section -->
@@ -41,7 +41,7 @@
                     <?php endfor; ?>
                 </div>
             </div>
-        </div>
+        </article>
     </main>
 
     <script src="./js/index.js"></script>

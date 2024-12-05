@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../css/css.css">
 
-    <title>MBO Cinema's - Home</title>
+    <title>MBO Cinema's - Mijn Reserveringen</title>
 </head>
 
 <body>
