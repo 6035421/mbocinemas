@@ -378,6 +378,48 @@ td {
     color: white;
 }
 
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.login-form button {
+    padding: 5px;
+}
+
+.register-form button:hover {
+    cursor: pointer;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.register-form input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.register-form button {
+    padding: 5px;
+}
+
+.register-form button:hover {
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+}
+
 @media only screen and (min-width: 600px) {
     main {
         width:70%;
