@@ -4,7 +4,7 @@ session_start();
 // Controleer of de gebruiker is ingelogd
 $isLoggedIn = isset($_SESSION['username']);
 if ($isLoggedIn) {
-        // Stel redirect naar index.php in na 3 seconden
+        // Stel redirect naar index.php in na 3 seconden als je ingelogd bent
         header("refresh:3;url=../index.php");
 } else {
     // Stel redirect naar form.php in na 3 seconden
