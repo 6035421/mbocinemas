@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         $stmt = $pdo->prepare("INSERT INTO users (username, password, email) VALUES (:username, :password, :email)");
         $stmt->execute(['username' => $username, 'password' => $password , 'email' => $email]);
-        echo "Registratie geslaagd! <a href='form.php'>Ga terug naar Login</a>";
+        echo "Registratie geslaagd! <a href='../index.php'>Ga terug naar Login</a>";
     } catch (PDOException $e) {
         if ($e->getCode() == 23000) {
             echo "Gebruikersnaam bestaat al. Kies een andere.";
