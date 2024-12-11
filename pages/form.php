@@ -29,6 +29,7 @@
     <h1>Registreren</h1>
     <form action="../templates/register.php" method="post" class="register-form">
         <input type="text" name="username" placeholder="Gebruikersnaam" required>
+        <input type="e-mail" name="mail" placeholder="E-mail" required>
         <input type="password" name="password" placeholder="Wachtwoord" required>
         <button type="submit">Registreer</button>
     </form>
