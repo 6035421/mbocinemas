@@ -11,6 +11,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     header("Location: ./pages/form.php");
     exit();
 }
+
+include './db/knakworst.php';
 ?>
 
 <title>MBO Cinema's - <?php echo htmlspecialchars(ucfirst(basename($_SERVER['PHP_SELF'], '.php'))); ?></title>
@@ -18,14 +20,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 <header>
     <img src='../assets/images/logo.png' alt='logo'>
     <h1 id="title">MBO Cinema's</h1>
-    <nav class="login-header">
-        <?php if (isset($_SESSION['username'])): ?>
-            <p>Welkom, <?= htmlspecialchars($_SESSION['username']); ?></p>
-            <a href="?action=logout">Uitloggen</a>
-        <?php else: ?>
-            <a href="/pages/form.php">Login</a>
-        <?php endif; ?>
-    </nav>
 
     <nav class="header-nav">
         <ul>
@@ -39,13 +33,27 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     </nav>
 </header>
 
-<style>
-    .header-login {
-        display: flex;
-        justify-content: flex-end;
-        list-style-type: none;
-        margin: 0;
-        margin-right: 20px;
-        padding: 0;
-    }
-</style>
+<article id="medewerkerControls"> <!-- hier plaatsen zodat het altijd word toegevoegd -->
+            <?php if (isset($_SESSION['username'])): ?>
+                <a class="FAB" href="?action=logout">Uitloggen</a>
+            <?php else: ?>
+                <a class="FAB" href="/pages/form.php">Login</a>
+            <?php endif; ?>
+
+            <?php
+            $username = $_SESSION['username'];
+            $id = $_SESSION['id'];
+            $rol = null;
+
+            $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
+            $stmt->execute(['id' => $id]);
+            $userRol = $stmt->fetch(PDO::FETCH_ASSOC);
+            $rol = $userRol['rol'];
+
+            if ($rol != 'Klant') { # add, reserveren, edit, edit reservatie and remove etc
+                echo '
+            <a class="FAB" href="../pages/editReserveringEnInfo.php?type=add">Films Beheeren</a>
+            ';
+            }
+            ?>
+        </article>

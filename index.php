@@ -15,7 +15,8 @@
 
 <body>
 
-    <?php include("./templates/header.php"); ?>
+    <?php include("./templates/header.php");
+    ?>
 
     <main>
         <article class="vertical-scroll">
