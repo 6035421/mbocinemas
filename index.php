@@ -1,3 +1,29 @@
+<?php
+include("./db/knakworst.php");
+
+try {
+    // Haal alle films
+    $filmsQuery = "
+        SELECT films.name AS film_name, films.image_path
+        FROM films
+        ORDER BY films.id
+    ";
+    $filmsStmt = $pdo->query($filmsQuery);
+    $films = $filmsStmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Haal alle categorieën
+    $categoriesQuery = "
+        SELECT name AS category_name, image_path
+        FROM categories
+        ORDER BY id
+    ";
+    $categoriesStmt = $pdo->query($categoriesQuery);
+    $categories = $categoriesStmt->fetchAll(PDO::FETCH_ASSOC);
+
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,28 +48,49 @@
             <h1>Home</h1>
 
             <!-- Nieuw Section -->
-            <div class="section">
+            <section class="section">
                 <h2 class="section-title">Nieuw</h2>
                 <div class="horizontal-scroll">
-                    <?php for ($i = 0; $i < 12; $i++): ?>
-                        <div class="grid-item"></div>
-                    <?php endfor; ?>
+                    <?php if (!empty($films)): ?>
+                        <?php foreach ($films as $film): ?>
+                            <div class="grid-item">
+                                <div class="grid-item-image">
+                                    <img src="<?php echo htmlspecialchars($film['image_path']); ?>"
+                                        alt="<?php echo htmlspecialchars($film['film_name']); ?>">
+                                    <div class="grid-item-title"><?php echo htmlspecialchars($film['film_name']); ?></div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No films available.</p>
+                    <?php endif; ?>
                 </div>
-            </div>
+            </section>
 
             <!-- Categorie Section -->
             <div class="section">
                 <h2 class="section-title">Categorie</h2>
                 <div class="horizontal-scroll">
-                    <?php for ($i = 0; $i < 12; $i++): ?>
-                        <div class="grid-item"></div>
-                    <?php endfor; ?>
+                    <?php if (!empty($categories)): ?>
+                        <?php foreach ($categories as $category): ?>
+                            <div class="grid-item">
+                                <div class="grid-item-image">
+                                    <img src="<?php echo htmlspecialchars($category['image_path']); ?>"
+                                        alt="<?php echo htmlspecialchars($category['category_name']); ?>">
+                                    <div class="grid-item-title"><?php echo htmlspecialchars($category['category_name']); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No categories available.</p>
+                    <?php endif; ?>
                 </div>
             </div>
         </article>
     </main>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
