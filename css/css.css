@@ -477,3 +477,7 @@ td {
 
     gap:8px
   }
+
+  .scroll {
+    overflow-y:auto;
+  }

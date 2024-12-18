@@ -17,7 +17,7 @@
 
     <?php include("../templates/header.php"); ?>
 
-    <main>
+    <main class="scroll">
         <section class="column">
 
             <hr titleText="Data">
