@@ -39,6 +39,31 @@
     } catch (PDOException $e) {
         die("Database connection failed: " . $e->getMessage());
     }
+
+    if (isset($_POST['filmName'])) {
+        $filmNaam = $_POST['filmName'];
+
+        $datum = $_POST['filmDatum'];
+        $tijd = $_POST['filmBeginTijd'];
+        $duur = $_POST['filmDuur'];
+
+        $icoon = $_POST['filmIcoon'];
+        $categorie = array_search($_POST['filmCategorie'], array_column($categories, 'category_name'));
+
+        if ($_GET['type'] == 'add') {
+            try {
+                $stmt = $pdo->prepare("INSERT INTO films (name, image_path, category_id, datums, tijden, duur) VALUES (:name, :image_path, :category_id, :datums, :tijden, :duur)");
+                $stmt->execute(['name' => $filmNaam, 'image_path' => $icoon, 'category_id' => $categorie, 'datums' => $datum, 'tijden' => $tijd, 'duur' => $duur]);
+                echo "Film succesvol toegevoegd.";
+            } catch (PDOException $e) {
+                if ($e->getCode() == 23000) {
+                    echo "Film bestaat al";
+                } else {
+                    echo "Er is een fout opgetreden: " . $e->getMessage();
+                }
+            }
+        }
+    }
     ?>
 
     <datalist id="films">
@@ -59,7 +84,7 @@
 
     <main class="scroll">
         <section class="column">
-            <form class="column">
+            <form class="column" id="filmsForm" method="post">
 
                 <article>
                     <div class="rounded row contact">

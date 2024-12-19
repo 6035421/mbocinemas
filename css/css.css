@@ -482,7 +482,7 @@ td {
     overflow-y:auto;
   }
 
-  form input {
+  #filmsForm input {
     background-color:TRANSPARENT;
 
     color: var(--secondaryTextColor);
