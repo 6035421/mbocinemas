@@ -53,7 +53,7 @@
         <?php
         foreach ($categories as $cat): ?>
 
-            echo `<option><?php echo htmlspecialchars($cat['film_name']); ?></option>`;
+            echo `<option><?php echo htmlspecialchars($cat['category_name']); ?></option>`;
         <?php endforeach; ?>
     </datalist>
 
@@ -64,7 +64,7 @@
                 <article>
                     <div class="rounded row contact">
                         <div class="rounded contactHighlight">Film: </div>
-                        <input type="text" name="filmName" value="Five Nights At Freddy's">
+                        <input type="text" list="films" name="filmName" value="Five Nights At Freddy's">
                     </div>
                 </article>
 
@@ -149,7 +149,7 @@
         
         <div class="rounded row contact">
             <div class="rounded contactHighlight">Categorie: </div>
-            <input type="text" name="filmCategorie" value="Fiction">
+            <input type="text" list="categories" name="filmCategorie" value="Fiction">
         </div>
     </article>';
                 }
