@@ -481,3 +481,10 @@ td {
   .scroll {
     overflow-y:auto;
   }
+
+  form input {
+    background-color:TRANSPARENT;
+
+    color: var(--secondaryTextColor);
+    font-size:18px;
+  }
