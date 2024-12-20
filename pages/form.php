@@ -18,24 +18,26 @@
     <h1 id="title">MBO Cinema's</h1>
 </header>
 
-<body>
-    <h1>Login</h1>
-    <form action="../templates/login.php" method="post" class="login-form">
-        <input type="text" name="username" placeholder="Gebruikersnaam" required>
-        <input type="password" name="password" placeholder="Wachtwoord" required>
-        <button type="submit">Login</button>
-    </form>
+<body id="loginBody">
+    <main>
+        <h1>Login</h1>
+        <form action="../templates/login.php" method="post" class="login-form">
+            <input id="loginUsername" type="text" name="username" placeholder="Gebruikersnaam">
+            <input id="loginPassword" type="password" name="password" placeholder="Wachtwoord">
+            <button type="submit">Login</button>
+        </form>
 
-    <h1>Registreren</h1>
-    <form action="../templates/register.php" method="post" class="register-form">
-        <input type="text" name="username" placeholder="Gebruikersnaam" required>
-        <input type="e-mail" name="mail" placeholder="E-mail" required>
-        <input type="password" name="password" placeholder="Wachtwoord" required>
-        <button type="submit">Registreer</button>
-    </form>
+        <h1>Registreren</h1>
+        <form action="../templates/register.php" method="post" class="register-form">
+            <input id="registerUsername" type="text" name="username" placeholder="Gebruikersnaam">
+            <input id="registerMail" type="e-mail" name="mail" placeholder="E-mail">
+            <input id="registerPassword" type="password" name="password" placeholder="Wachtwoord">
+            <button type="submit">Registreer</button>
+        </form>
+    </main>
 
-    <!-- Home -->
-    <h1><a href="../index.php">Home</a></h1>
+    <script src="../js/formValidatie.js"></script>
+    <script src="../js/formStoring.js"></script>
 </body>
 
 </html>

@@ -552,4 +552,45 @@ p {
         margin-left: auto;
         margin-right: auto;
     }
+  }
+
+  #medewerkerControls {
+    position:fixed;
+
+    bottom:8px;
+    right:8px;
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+    align-items:flex-end;
+  }
+
+  .FAB {
+    background-color:var(--secondary);
+    color:var(--secondaryTextColor);
+
+    padding:8px;
+
+    width:max-content;
+  }
+
+  #loginBody main {
+    display:flex;
+    flex-direction:column;
+
+    gap:8px
+  }
+
+  .scroll {
+    overflow-y:auto;
+  }
+
+  #filmsForm input {
+    background-color:TRANSPARENT;
+
+    color: var(--secondaryTextColor);
+    font-size:18px;
+  }
 }
