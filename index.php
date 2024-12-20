@@ -41,30 +41,7 @@ try {
 
 <body>
 
-    <?php include("./templates/header.php");
-    try {
-        // Haal alle films
-        $filmsQuery = "
-            SELECT films.name AS film_name, films.image_path
-            FROM films
-            ORDER BY films.id
-        ";
-        $filmsStmt = $pdo->query($filmsQuery);
-        $films = $filmsStmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // Haal alle categorieën
-        $categoriesQuery = "
-            SELECT name AS category_name, image_path
-            FROM categories
-            ORDER BY id
-        ";
-        $categoriesStmt = $pdo->query($categoriesQuery);
-        $categories = $categoriesStmt->fetchAll(PDO::FETCH_ASSOC);
-
-    } catch (PDOException $e) {
-        die("Database connection failed: " . $e->getMessage());
-    }
-    ?>
+    <?php include("./templates/header.php"); ?>
 
     <main>
         <article class="vertical-scroll">
