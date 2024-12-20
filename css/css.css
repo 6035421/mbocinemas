@@ -479,6 +479,65 @@ p {
     color: white;
 }
 
+/* Styling for movie information */
+.movie-info {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    color: white;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for a floating effect */
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Title Styling */
+.movie-info h1 {
+    font-size: 2.5em;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: var(--primaryTextColor);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+/* Movie image styling */
+.movie-info img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 20px 0;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Description text styling */
+.movie-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Category and ID styling */
+.movie-info .category,
+.movie-info .film-id {
+    background-color: var(--secondary);
+    color: var(--secondaryTextColor);
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    border-radius: 8px;
+}
+
+.movie-info .film-id {
+    background-color: var(--tertiary);
+    color: var(--tertiaryTextColor);
+}
+
+.movie-info h1:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 600px) {
     main {
         width: 70%;

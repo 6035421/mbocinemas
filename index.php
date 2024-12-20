@@ -4,7 +4,7 @@ include("./db/knakworst.php");
 try {
     // Haal alle films
     $filmsQuery = "
-        SELECT films.name AS film_name, films.image_path
+        SELECT films.id, films.name AS film_name, films.image_path
         FROM films
         ORDER BY films.id
     ";
@@ -55,9 +55,11 @@ try {
                         <?php foreach ($films as $film): ?>
                             <div class="grid-item">
                                 <div class="grid-item-image">
-                                    <img src="<?php echo htmlspecialchars($film['image_path']); ?>"
-                                        alt="<?php echo htmlspecialchars($film['film_name']); ?>">
-                                    <div class="grid-item-title"><?php echo htmlspecialchars($film['film_name']); ?></div>
+                                    <a href="/pages/film.php?id=<?php echo htmlspecialchars($film['id']); ?>">
+                                        <img src="<?php echo htmlspecialchars($film['image_path']); ?>"
+                                            alt="<?php echo htmlspecialchars($film['film_name']); ?>">
+                                        <div class="grid-item-title"><?php echo htmlspecialchars($film['film_name']); ?></div>
+                                    </a>
                                 </div>
                             </div>
                         <?php endforeach; ?>

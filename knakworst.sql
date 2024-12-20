@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Dumpen data van tabel mbocinemas.categories: ~3 rows (ongeveer)
+-- Dumpen data van tabel mbocinemas.categories: ~6 rows (ongeveer)
 REPLACE INTO `categories` (`id`, `name`, `image_path`) VALUES
 	(1, 'Action', '/assets/images/action.jpg'),
 	(2, 'Fiction', '/assets/images/fiction.jpg'),
@@ -42,20 +42,21 @@ CREATE TABLE IF NOT EXISTS `films` (
   `name` varchar(255) NOT NULL,
   `image_path` varchar(255) NOT NULL,
   `category_id` int NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`),
   CONSTRAINT `films_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumpen data van tabel mbocinemas.films: ~7 rows (ongeveer)
-REPLACE INTO `films` (`id`, `name`, `image_path`, `category_id`) VALUES
-	(8, 'Dune', '/assets/images/dune.webp', 1),
-	(9, 'Inception', '/assets/images/inception.jpg', 1),
-	(10, 'Interstellar', '/assets/images/interstellar.jpg', 2),
-	(11, 'Avatar', '/assets/images/avatar.webp', 3),
-	(12, 'Fight Club', '/assets/images/fight_club.webp', 1),
-	(13, 'The Dark Knight', '/assets/images/darkknight.jpg', 3),
-	(14, 'Black Panther', '/assets/images/blackpanther.jpg', 2);
+REPLACE INTO `films` (`id`, `name`, `image_path`, `category_id`, `description`) VALUES
+	(8, 'Dune', '/assets/images/dune.webp', 1, 'Paul Atreides arrives on Arrakis after his father accepts the stewardship of the dangerous planet. However, chaos ensues after a betrayal as forces clash to control melange, a precious resource.'),
+	(9, 'Inception', '/assets/images/inception.jpg', 1, 'Cobb steals information from his targets by entering their dreams. He is wanted for his alleged role in his wife\'s murder and his only chance at redemption is to perform a nearly impossible task.'),
+	(10, 'Interstellar', '/assets/images/interstellar.jpg', 2, 'When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.'),
+	(11, 'Avatar', '/assets/images/avatar.webp', 3, 'A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.'),
+	(12, 'Fight Club', '/assets/images/fight_club.webp', 1, 'Unhappy with his capitalistic lifestyle, a white-collared insomniac forms an underground fight club with Tyler, a careless soap salesman. Soon, their venture spirals down into something sinister.'),
+	(13, 'The Dark Knight', '/assets/images/darkknight.jpg', 3, 'Batman has a new foe, the Joker, who is an accomplished criminal hell-bent on decimating Gotham City. Together with Gordon and Harvey Dent, Batman struggles to thwart the Joker before it is too late.'),
+	(14, 'Black Panther', '/assets/images/blackpanther.jpg', 2, 'After his father\'s death, T\'Challa returns home to Wakanda to inherit his throne. However, a powerful enemy related to his family threatens to attack his nation.');
 
 -- Structuur van  tabel mbocinemas.users wordt geschreven
 CREATE TABLE IF NOT EXISTS `users` (
