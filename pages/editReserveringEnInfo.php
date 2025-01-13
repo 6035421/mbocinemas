@@ -169,12 +169,12 @@
     <article>
         <div class="rounded row contact">
             <div class="rounded contactHighlight">Icoon: </div>
-            <input type="link" name="filmIcoon" value="XO-XO-XO">
+            <input type="url" name="filmIcoon" value="XO-XO-XO">
         </div>
         
         <div class="rounded row contact">
             <div class="rounded contactHighlight">Categorie: </div>
-            <input type="url" list="categories" name="filmCategorie" value="Fiction">
+            <input type="text" list="categories" name="filmCategorie" value="Fiction">
         </div>
     </article>';
                 }
