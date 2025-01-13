@@ -181,7 +181,10 @@
                 ?>
 
 
-                <button type='submit' id="safe">Opslaan</button>
+                <article class="row">
+                    <button type='submit' id="safe">Opslaan</button>
+                    <button type='submit' id="delete">Verwijder/Annuleer</button>
+                </article>
             </form>
         </section>
     </main>
