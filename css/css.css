@@ -247,6 +247,16 @@ h1 {
     color: var(--tertiaryTextColor);
 }
 
+.row #safe {
+    margin-right:8px;
+
+    margin-left:auto;
+}
+
+.row #delete {
+    margin-right:auto;
+}
+
 .marginBottom {
     margin-bottom: 8px;
 }
