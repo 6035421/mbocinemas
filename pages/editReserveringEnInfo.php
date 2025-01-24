@@ -40,7 +40,7 @@
         die("Database connection failed: " . $e->getMessage());
     }
 
-    if (isset($_POST['filmName'])) {
+    if (isset($_POST['filmName']) && !$_GET['type'] == 'delete') {
         $filmNaam = $_POST['filmName'];
 
         $datum = $_POST['filmDatum'];
@@ -48,7 +48,7 @@
         $duur = $_POST['filmDuur'];
 
         $icoon = $_POST['filmIcoon'];
-        $categorie = array_search($_POST['filmCategorie'], array_column($categories, 'category_name'));
+        $categorie = array_search($_POST['filmCategorie'], array_column($categories, 'category_name')) + 1;
 
         if ($_GET['type'] == 'add') {
             try {
@@ -89,7 +89,7 @@
                 <article>
                     <div class="rounded row contact">
                         <div class="rounded contactHighlight">Film: </div>
-                        <input type="text" list="films" name="filmName" value="Five Nights At Freddy's">
+                        <input type="text" list="films" name="filmName" id="filmName" value="Five Nights At Freddy's">
                     </div>
                 </article>
 
@@ -112,7 +112,7 @@
                 </article>
 
                 <?php
-                if ($_GET['type'] != 'add') {
+                if ($_GET['type'] != 'add' && $_GET['type'] != 'delete') {
                     echo '
     <hr titleText="Locatie">
     <article>
@@ -163,13 +163,28 @@
             3336 QD, Sassenheim
         </div>
     </article>';
+                } else if ($_GET['type'] == 'delete') {
+                    try {
+                        $film = $_GET['filmName'];
+                        echo $film;
+
+                        // delete de film
+                        $stmt = $pdo->prepare("DELETE FROM films WHERE name = :film");
+    
+                        // Execute the statement with the user-provided parameter
+                        $stmt->execute([':film' => $film]);
+
+                        header("refresh:3;url=http://localhost:3000/pages/editReserveringEnInfo.php?type=add");
+                    } catch (PDOException $e) {
+                        echo $e->getMessage();
+                    }
                 } else {
                     echo '
     <hr titleText="displayData">
     <article>
         <div class="rounded row contact">
             <div class="rounded contactHighlight">Icoon: </div>
-            <input type="file" name="filmIcoon" value="XO-XO-XO">
+            <input type="url" name="filmIcoon" value="XO-XO-XO">
         </div>
         
         <div class="rounded row contact">
@@ -181,7 +196,10 @@
                 ?>
 
 
-                <button type='submit' id="safe">Opslaan</button>
+                <article class="row">
+                    <button type='submit' id="safe">Opslaan</button>
+                    <button type='submit' id="delete">Verwijder/Annuleer</button>
+                </article>
             </form>
         </section>
     </main>
@@ -190,6 +208,7 @@
     <script src="../js/formValidatie.js"></script>
     <script src="../js/formStoring.js"></script>
     <script src="../mbocinemas/js/index.js"></script>
+    <script src="../js/filmsBeheer.js"></script>
 </body>
 
 </html>

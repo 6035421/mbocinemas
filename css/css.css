@@ -236,7 +236,7 @@ h1 {
     align-items: flex-start;
 }
 
-#safe {
+#safe, #delete {
     padding: 8px;
 
     font-size: 25px;
@@ -245,9 +245,16 @@ h1 {
 
     background-color: var(--tertiary);
     color: var(--tertiaryTextColor);
+}
 
-    margin-right: auto;
-    margin-left: auto;
+.row #safe {
+    margin-right:8px;
+
+    margin-left:auto;
+}
+
+.row #delete {
+    margin-right:auto;
 }
 
 .marginBottom {
@@ -593,4 +600,3 @@ p {
     color: var(--secondaryTextColor);
     font-size:18px;
   }
-}
